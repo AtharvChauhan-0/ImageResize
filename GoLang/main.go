@@ -25,12 +25,12 @@ import (
 func main() {
 
 }
+func init()
+{
+	functions.CloudEcebt("EventProcessor",EventProcessor)
+}
 
 func EventProcessor(ctx context.Context, e event.Event) {
-// 	port := os.Getenv("PORT")
-// if port == "" {
-//         port = "8080"
-//    }
 	var data StorageObjectData
 	if err := e.DataAs(&data); err != nil {
 		fmt.Errorf("event.DataAs: %v", err)
