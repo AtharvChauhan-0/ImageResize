@@ -1,4 +1,4 @@
-package main
+package funcx
 
 import (
 	"bytes"
@@ -17,41 +17,20 @@ import (
 	_ "io/ioutil"
 	"log"
 	_ "log"
-	"net/http"
-	_ "net/http"
 	"os"
 	_ "os"
 )
 
-//TIP To run your code, right-click the code and select <b>Run</b>. Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.
 
 func main() {
 
 }
-// func HTTPHandler(w http.ResponseWriter, r *http.Request) {
-// 	//var data struct {
-// 	//}
-// 	//ctx := context.Background()
-// 	//client, err := storage.NewClient(ctx)
-// 	//if err != nil {
-// 	//	panic(err)
-// 	//}
-// 	//var objname []string
-// 	//bktdown := client.Bucket("")
-// 	//bktup := client.Bucket("")
-// 	//it := bktdown.Objects(ctx, nil)
-// 	//for {
-// 	//	attrs, err := it.Next()
-// 	//	if err != nil {
-// 	//		log.Fatal(err)
-// 	//	}
-// 	//	objname = append(objname, attrs.Name)
-// 	//	fmt.Println(objname)
-// 	//}
 
-// }
 func EventProcessor(ctx context.Context, e event.Event) {
+// 	port := os.Getenv("PORT")
+// if port == "" {
+//         port = "8080"
+//    }
 	var data StorageObjectData
 	if err := e.DataAs(&data); err != nil {
 		fmt.Errorf("event.DataAs: %v", err)
