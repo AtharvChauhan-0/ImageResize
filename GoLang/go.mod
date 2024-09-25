@@ -4,7 +4,8 @@ go 1.22
 
 require (
 	cloud.google.com/go/storage v1.43.0
-	github.com/cloudevents/sdk-go/v2 v2.5.0
+	github.com/GoogleCloudPlatform/functions-framework-go v1.9.0
+	github.com/cloudevents/sdk-go/v2 v2.15.2
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 )
 
