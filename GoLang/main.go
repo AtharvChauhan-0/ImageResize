@@ -27,7 +27,7 @@ func main() {
 }
 func init()
 {
-	functions.CloudEcebt("EventProcessor",EventProcessor)
+	functions.CloudEvent( "EventProcessor", EventProcessor)
 }
 
 func EventProcessor(ctx context.Context, e event.Event) {
