@@ -25,8 +25,7 @@ import (
 func main() {
 
 }
-func init()
-{
+func init() {
 	functions.CloudEvent( "EventProcessor", EventProcessor)
 }
 
