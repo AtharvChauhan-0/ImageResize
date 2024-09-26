@@ -6,6 +6,7 @@ import (
 	_ "cloud.google.com/go/storage"
 	"context"
 	"fmt"
+	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
 	"github.com/cloudevents/sdk-go/v2/event"
 	"github.com/nfnt/resize"
 	_ "github.com/nfnt/resize"
