@@ -47,13 +47,14 @@ func EventProcessor(ctx context.Context, e event.Event) error {
 	}
 	err = jpeg.Encode(out, m, nil)
 	if err != nil {
-		return
+		return fmt.Errorf("failed to encode image: %v", err)
 	}
 	if err := uploadImageToBucket(ctx, "result_img", "Result", "test_resized.jpg"); err != nil {
 		log.Fatalf("Failed to upload image: %v", err)
 	} else {
 		fmt.Println("Image uploaded successfully.")
 	}
+	return nil
 }
 
 func downloadImage(ctx context.Context, bucket, name string) ([]byte, error) {
