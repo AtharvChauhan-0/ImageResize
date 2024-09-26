@@ -30,7 +30,7 @@ func init() {
 	functions.CloudEvent( "EventProcessor", EventProcessor)
 }
 
-func EventProcessor(ctx context.Context, e event.Event) {
+func EventProcessor(ctx context.Context, e event.Event) error {
 	var data StorageObjectData
 	if err := e.DataAs(&data); err != nil {
 		fmt.Errorf("event.DataAs: %v", err)
